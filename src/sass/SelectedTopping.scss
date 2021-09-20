@@ -1,0 +1,29 @@
+.item {
+    position: relative;
+
+    &__name {
+        font-family:  'Noto Sans KR';
+        z-index: -1;
+    }
+
+    &__button {
+       position: absolute;
+       top: 50%;
+       right: 15px;
+       transform: translateY(-50%);
+       display: none;
+       z-index: 1;
+
+       &--icon {
+           color: rgba(black, 0.3);
+       }
+    }
+
+    &:hover {
+
+        & .item__button {
+            display: block;
+        }
+
+    }
+}

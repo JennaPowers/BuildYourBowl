@@ -1,0 +1,9 @@
+.ui.modal.active {
+  height: auto;
+  width: 500px; }
+
+.ui.modal.active.change {
+  padding: none;
+  padding-bottom: 15px;
+  height: auto;
+  width: 500px; }

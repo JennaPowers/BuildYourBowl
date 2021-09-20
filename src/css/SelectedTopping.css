@@ -1,0 +1,16 @@
+.item {
+  position: relative; }
+  .item__name {
+    font-family: 'Noto Sans KR';
+    z-index: -1; }
+  .item__button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    display: none;
+    z-index: 1; }
+    .item__button--icon {
+      color: rgba(0, 0, 0, 0.3); }
+  .item:hover .item__button {
+    display: block; }

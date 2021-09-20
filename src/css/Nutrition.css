@@ -1,0 +1,79 @@
+.card__content {
+  display: flex;
+  font-family: 'Noto Sans KR';
+  text-transform: lowercase;
+  position: relative;
+  padding: 0 15px; }
+
+.card__header {
+  background-color: #e4e3e3;
+  color: black;
+  margin-bottom: 7px;
+  padding: 10px;
+  position: relative;
+  height: 50px; }
+  .card__header--name {
+    font-size: 35px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); }
+  .card__header--icon {
+    font-size: 30px;
+    transform: translateX(100px); }
+
+.card__values {
+  text-align: left;
+  font-family: 'Noto Sans KR';
+  text-transform: lowercase;
+  transform: translateX(30px); }
+  .card__values--meta {
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 15px; }
+  .card__values--description {
+    font-size: 25px;
+    font-weight: lighter;
+    color: #b9b9b9; }
+
+.card__form {
+  font-family: 'Noto Sans KR';
+  padding-top: 15px;
+  text-align: left; }
+  .card__form--enter {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: lighter;
+    display: inline-block;
+    margin-bottom: 30px; }
+
+.card__field {
+  margin-bottom: 20px; }
+  .card__field--label {
+    font-family: 'Noto Sans KR';
+    font-size: 20px;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px 7px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7));
+    margin-bottom: 30px; }
+    .card__field--label--1 {
+      display: inline-block;
+      padding-right: 5px;
+      padding-bottom: 8px; }
+  .card__field--input {
+    display: inline-block;
+    width: 40px;
+    border-radius: 3px;
+    border: none; }
+
+.card__line {
+  border-left: 3px solid transparent;
+  height: 200px;
+  margin-left: 30px;
+  margin-top: 15px;
+  border-image: linear-gradient(to bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7));
+  -webkit-border-image: -webkit-linear-gradient(to bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7));
+  border-image-slice: 1; }

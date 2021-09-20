@@ -1,0 +1,16 @@
+.ui.modal {
+  text-align: center;
+  font-size: 20px;
+  width: 500px; }
+
+.container {
+  position: relative;
+  margin-top: 15px;
+  font-family: 'Noto Sans KR';
+  padding-bottom: 15px; }
+  .container__title {
+    margin-bottom: 15px; }
+    .container__title--icon {
+      position: absolute;
+      top: 0;
+      right: 30px; }

@@ -1,0 +1,49 @@
+.header {
+    margin: 0 auto;
+
+    &__primary {
+        animation: fadeInLeft 1.3s;
+        font-family: 'Dancing Script', serif;
+        font-size: 5rem;    
+    }
+}
+
+.ui.header {
+    margin: 0;
+}
+
+.ui.container {
+    width: 1500px;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translate(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translate(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

@@ -1,0 +1,47 @@
+.grid {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    column-gap: 50px;
+    margin-left: 50px;
+    width: 300px;
+
+    &:hover .category:not(:hover) {
+        transform: scale(.95);
+    }
+}
+
+.category {
+    margin-top: 30px;
+    position: relative;
+    transition: all .4s;
+
+    &__content {
+        background-color: white;
+        color: black;
+        border-radius: 20px;
+        width: 130px;
+        height: 130px;
+        position: relative;
+        box-shadow: 0 0 7px 12px rgb(224, 224, 224);
+        float: left;
+        clear: left;
+        margin: 20px;
+        padding: 10px;
+        transition: all 0.3s linear 0s;
+        
+        &:hover {
+            box-shadow: 0 0 7px 12px rgb(201, 201, 201);
+            transform: scale(1.1) translateY(-3px);
+        }
+    }
+
+    &__header {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 300;
+        font-size: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
