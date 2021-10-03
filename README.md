@@ -6,3 +6,10 @@ This project is currently in development. Users can progress through a series of
 
 **1)** Single page React app that contains main functionality<br/>
 **2)** Interaction with Axios, an HTTP client library that allows users to make requests to a Food API for retrieving nutritional information based on precise serving size selections.
+
+**Screenshots:**
+
+![App screenshot](/src/images/screenshots/screenshot4.png)
+![App screenshot](/src/images/screenshots/screenshot2.png)
+![App screenshot](/src/images/screenshots/screenshot1.png)
+![App screenshot](/src/images/screenshots/screenshot3.png)
