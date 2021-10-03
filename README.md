@@ -7,6 +7,8 @@ This project is currently in development. Users can progress through a series of
 **1)** Single page React app that contains main functionality<br/>
 **2)** Interaction with Axios, an HTTP client library, that allows users to make requests to a Food API for retrieving nutritional information based on precise serving size selections.
 
+**Try it out here (on Chrome):** https://bowl.vercel.app
+
 **Screenshots:**
 1. Landing page
 2. Toppings view with ability to add item to bowl or view its nutrition info.
