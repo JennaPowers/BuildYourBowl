@@ -11,5 +11,5 @@ This project is currently in development. Users can progress through a series of
 
 ![App screenshot](/src/images/screenshots/screenshot4.png)
 ![App screenshot](/src/images/screenshots/screenshot2.png)
-![App screenshot](/src/images/screenshots/screenshot1.png)
 ![App screenshot](/src/images/screenshots/screenshot3.png)
+![App screenshot](/src/images/screenshots/screenshot1.png)
