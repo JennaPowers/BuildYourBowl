@@ -5,6 +5,7 @@ import ModalNutrition from './ModalNutrition';
 import history from '../history';
 import '../css/Nutrition.css';
 import '../css/icon-font.css';
+import { changeServingSize } from '../actions';
 
 class Nutrition extends React.Component {
     constructor(props) {
@@ -13,14 +14,13 @@ class Nutrition extends React.Component {
         this.renderUnitInput = this.renderUnitInput.bind(this);
     }
 
-    renderAmountInput(label) {
+    renderAmountInput(formProps) {
         return(
             <div className="card__field">
                 <label className="card__field--label">
                     <span className="card__field--label--1">Amount</span>
-                    <input className="card__field--input" value="100"/>
+                    <input {...formProps.input} className="card__field--input" defaultValue="100"/>
                 </label>
-
             </div>
         );
     }
@@ -31,15 +31,20 @@ class Nutrition extends React.Component {
         });
     }
 
-    renderUnitInput() {
+    renderUnitInput(formProps) {
         return(
             <div className="card__field">
                 <label className="card__field--label">
                     <span className="card__field--label--1">Units</span>
-                    <select className="card__field--input">{this.renderedUnitDropDown()}</select>
+                    <select {...formProps.input} className="card__field--input">{this.renderedUnitDropDown()}</select>
                 </label>
             </div>
         );
+    }
+
+    onSubmit = (formValues) => {
+         console.log(formValues);
+         this.props.changeServingSize(formValues);
     }
 
     renderNutritionInfo() {
@@ -50,7 +55,7 @@ class Nutrition extends React.Component {
                     <i className="card__header--icon fas fa-seedling" />
                 </div>
                 <div className="card__content">
-                    <form className="card__form">
+                    <form className="card__form" onSubmit={this.props.handleSubmit(this.onSubmit)} >
                         <span className="card__form--enter">Enter</span>
                         <Field name="amount" component={this.renderAmountInput} />
                         <Field name="unit" component={this.renderUnitInput} />
@@ -69,7 +74,6 @@ class Nutrition extends React.Component {
     };
 
     render() {
-        console.log(this.props.units);
         return(
             <ModalNutrition 
                 content={this.renderNutritionInfo()}
@@ -83,7 +87,6 @@ const mapStateToProps = (state) => {
     return {
         nutritionInfo: state.nutritionInfo.nutrition,
         units: state.nutritionInfo.possibleUnits
-        
     };
 };
 
@@ -91,4 +94,4 @@ const formWrapped = reduxForm({
     form: 'servingSize'
 })(Nutrition);
 
-export default connect(mapStateToProps, null)(formWrapped);
+export default connect(mapStateToProps, { changeServingSize: changeServingSize })(formWrapped);

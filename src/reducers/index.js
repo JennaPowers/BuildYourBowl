@@ -305,6 +305,13 @@ const makeToppingBubble = (state = [], action) => {
     return state;
 };
 
+const id = (state = '', action) => {
+    if (action.type == 'ID') {
+        return action.payload;
+    }
+    return state;
+}
+
 export default combineReducers({
     bowls: bowlsReducer,
     selectedBowl: selectedBowlReducer,
@@ -312,6 +319,7 @@ export default combineReducers({
     selectedTopping: selectedToppingReducer,
     nutritionInfo,
     toppingBubbles: makeToppingBubble,
+    id: id,
     form: formReducer
 });
 
