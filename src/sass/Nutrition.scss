@@ -64,7 +64,7 @@
     }
 
     &__field {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
 
         &--label {
             font-family: 'Noto Sans KR';
@@ -94,12 +94,25 @@
 
     &__line {
         border-left: 3px solid transparent;
-        height: 200px;
+        height: 300px;
         margin-left: 30px;
         margin-top: 15px;
         border-image: linear-gradient(to bottom, rgba(#7ed56f, .7), rgba(#28b485, .7));
         -webkit-border-image: -webkit-linear-gradient(to bottom, rgba(#7ed56f, .7), rgba(#28b485, .7));
         border-image-slice: 1;
 
+    }
+
+    &__button {
+        font-family: 'Noto Sans KR';
+        padding: 5px 10px;
+        background-image: linear-gradient(to right bottom, rgba(#7ed56f, .7), rgba(#28b485, .7));
+        color: white;
+        border-radius: 10px;
+        border: transparent;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
     }
 }

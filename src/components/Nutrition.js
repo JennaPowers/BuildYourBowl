@@ -47,6 +47,18 @@ class Nutrition extends React.Component {
          this.props.changeServingSize(formValues);
     }
 
+    displayValues() {
+        let values = this.props.nutritionInfo.nutrients.filter((e) => e.title == 'Calories' || e.title == 'Fat'
+            || e.title == 'Saturated Fat' || e.title == 'Carbohydrates' || e.title == 'Sugar'
+            || e.title == 'Protein' || e.title == 'Fiber' || e.title == 'Sodium');
+
+            values.sort((a, b) => a.title.localeCompare(b.title));
+
+        return values.map((e) => {
+            return <div className="card__values--meta">{e.title}: <span className="card__values--description">{e.amount}</span></div>
+        });
+    }
+
     renderNutritionInfo() {
         return(
             <div className="card">
@@ -62,11 +74,12 @@ class Nutrition extends React.Component {
                     </form>
                     <div className="card__line"></div>
                     <div className="card__values">
-                        <div className="card__values--meta">Calories: <span className="card__values--description">{this.props.nutritionInfo.nutrients[22].amount}</span></div>
+                        {this.displayValues()}
+                        {/* <div className="card__values--meta">Calories: <span className="card__values--description">{this.props.nutritionInfo.nutrients[22].amount}</span></div>
                         <div className="card__values--meta">Fat: <span className="card__values--description">{this.props.nutritionInfo.nutrients[5].amount}</span></div>
                         <div className="card__values--meta">Saturated Fat: <span className="card__values--description">{this.props.nutritionInfo.nutrients[20].amount}</span></div>
                         <div className="card__values--meta">Carbohydrates: <span className="card__values--description">{this.props.nutritionInfo.nutrients[17].amount}</span></div>
-                        <div className="card__values--meta">Sugar: <span className="card__values--description">{this.props.nutritionInfo.nutrients[1].amount}</span></div>
+                        <div className="card__values--meta">Sugar: <span className="card__values--description">{this.props.nutritionInfo.nutrients[1].amount}</span></div> */}
                     </div>
                 </div>
             </div>
